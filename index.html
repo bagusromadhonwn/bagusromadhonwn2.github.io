@@ -302,6 +302,12 @@
 	  </style>
 	</head>
 	<body onload="init()">
+		<template>
+  <v-app>
+    <audio src="music.mp3" autoplay controls loop style="opacity:0" />
+      <nuxt />
+  </v-app>
+</template>
 		<div class="kontrol" onload="readStorage()">
 			<div class="panah"></div>
 			<div class="custom-control custom-radio">
@@ -873,19 +879,19 @@
 				S=s;
 
 				if (H<4){
-					txt='Have a Good Night Pes:)';
+					txt='Have a Good Night Pes:), Ojo begadang ae sakno awak e';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<9){
-					txt='Good Morning Sepettt:)';
+					txt='Good Morning Sepettt ,Semangat menjalani hari:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<12){
-					txt='Be Happy Today:)';
+					txt='Be Happy Today,Keep strong:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -903,7 +909,7 @@
 					txt2=txt;
 				}
 				else if(H<23){
-					txt='Good Evening Sept:)';
+					txt='Good Evening Sept, ojo begadang teros lho:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -987,7 +993,7 @@
 			    "source": "Imam Syafi'i"
 			  },
 			]
-			setInterval(randomQuote, 60000);
+			setInterval(randomQuote, 6000);
 			function randomQuote(){
 			  let random = quotes[Math.floor(Math.random() * quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
